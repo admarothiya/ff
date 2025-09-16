@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Fake Headline Fun</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='home.css') }}"
+    
+    />
+    <style>
+      /* Navbar styling */
+      .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 200px;
+        align-items: center;
+        padding: 20px 50px;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 3;
+      }
+
+      .navbar .logo {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: white;
+      }
+
+      .navbar .nav-links {
+        display: flex;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: opacity 0.3s ease;
+      }
+
+      .navbar .nav-links a:hover {
+        opacity: 0.8;
+      }
+
+      .navbar .register-btn {
+        background-color: #ff6600;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+      }
+
+      .navbar .register-btn:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">Fake Headline Fun</div>
+      <div class="nav-links">
+       <a href="/">Home</a>        
+        <a href="/register" class="register-btn">Register</a>
+      </div>
+    </div>
+
+    <!-- Text Section -->
+    <div class="text-section">
+      <h1>Welcome to Fake Headline Fun</h1>
+      <p>
+        Create hilarious and viral fake headlines in seconds. Enter words and
+        let the magic happen!
+      </p>
+      <a href="/register" class="fun-button">Let's Go To Fun</a>
+    </div>
+
+    <!-- Background Video -->
+    <video class="background-video" autoplay muted loop>
+      <source
+        src="{{ url_for('static', filename='sunny.mp4') }}"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>

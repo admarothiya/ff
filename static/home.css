@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    
+    background: linear-gradient(135deg, #734ec8, #e98ffb);
+    background-size: cover;     /* Full background cover */
+
+    background-position: full; /* Center the background */
+    /* background-repeat: no-repeat; / */
+    
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    color: #e98ffb;
+}
+
+video.background-video {
+    position: absolute;
+    top: 50%;             /* vertically center */
+    right: 50px;          /* distance from the right edge */
+    width: 600px;         /* moderate width */
+    height: 400px;        /* moderate height */
+    transform: translateY(-50%); /* center vertically */
+    object-fit: cover;
+    z-index: 1;           /* behind text */
+    opacity: 0.9;
+    border-radius: 16px;  /* optional: rounded corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* optional: shadow */
+}
+
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10%); }
+    100% { transform: translateX(0); }
+}
+
+.text-section {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 500px;
+    animation: fadeSlideIn 2s ease forwards;
+    opacity: 0;
+    z-index: 2;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(-50%);
+    }
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.5;
+}
+
+.fun-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    font-size: 20px;
+    background-color: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: opacity 0.3s ease;
+}
+
+.fun-button:hover {
+    opacity: 0.9;
+}
