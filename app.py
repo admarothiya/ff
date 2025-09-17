@@ -5,7 +5,7 @@ import random, re
 app = Flask(__name__)
 
 # MongoDB configuration
-client = MongoClient("mongodb://localhost:27017/fake_headline_app")
+client = MongoClient("mongodb+srv://aditya:<adi@12345>@adityakumawat.cempluo.mongodb.net//fake_headline_app")
 
 db = client.fake_headline_app
 users_collection = db.users
