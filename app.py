@@ -4,8 +4,14 @@ import random, re
 
 app = Flask(__name__)
 
-# MongoDB configuration
-client = MongoClient("mongodb+srv://aditya:<adi@12345>@adityakumawat.cempluo.mongodb.net//fake_headline_app")
+from urllib.parse import quote_plus
+
+username = 'aditya'
+password = 'adi@12345'
+password_encoded = quote_plus(password)
+
+MONGO_URI = f"mongodb+srv://{username}:{password_encoded}@adityakumawat.cempluo.mongodb.net/fake_headline_app"
+client = MongoClient(MONGO_URI)
 
 db = client.fake_headline_app
 users_collection = db.users
