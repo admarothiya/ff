@@ -10,8 +10,7 @@ username = 'aditya'
 password = 'adi@12345'
 password_encoded = quote_plus(password)
 
-MONGO_URI = f"mongodb+srv://{username}:{password_encoded}@adityakumawat.cempluo.mongodb.net/fake_headline_app?retryWrites=true&w=majority&ssl=true"
-
+MONGO_URI = f"mongodb+srv://{username}:{password_encoded}@adityakumawat.cempluo.mongodb.net/fake_headline_app"
 client = MongoClient(MONGO_URI)
 
 db = client.fake_headline_app
